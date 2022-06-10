@@ -1,4 +1,4 @@
-# Worday-scheduler
+# Worday-Scheduler
 
 ## Description
 
@@ -12,7 +12,7 @@ This program acts a planner for hours during the work day. Using Jquery Css and 
 Click the live link or open index.html in the default browser
 
 ## Credits
-I would like to credit austin from askBCS for helping me with my saveLocalStorage function and myself for creating the logic used for user interaction
+I would like to credit austin from askBCS for helping me with my saveLocalStorage function and myself for creating the logic used for user interactionk
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
