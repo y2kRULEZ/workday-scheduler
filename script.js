@@ -4,7 +4,6 @@ var currentHour = moment().hour()//get current hour
 var currentDay= $("#currentDay")
 var systemTime = moment().format("dddd, MMMM Do")
 var saveBtnEL =$(".saveBtn")//grab the save button
-console.log(textAreaEL)
 
 currentDay.text(systemTime)//text content in js
 function displayTimeColor(){
@@ -33,12 +32,14 @@ function displayTimeColor(){
 }
 function saveLocalStorage(){
     //set local storage for each time block
+    var dataArray=[]
     for(i=0;i<timeBlockARR.length;i++){
         var textAreaEL =$("#"+timeBlockARR[i])
-        var textAreaValue = textAreaEL.text()
-        console.log(textAreaValue)
-        localStorage.setItem("text",textAreaEL.val())
+       if(textAreaEL.val()!=""){
         
+        dataArray.push(textAreaEL.val())
+        localStorage.setItem("text",JSON.stringify(dataArray))
+       }
     }
      
     
@@ -49,5 +50,5 @@ function saveLocalStorage(){
 }
 
 displayTimeColor()
-saveBtnEL.on("click",saveLocalStorage())
+saveBtnEL.on("click",saveLocalStorage)
 
